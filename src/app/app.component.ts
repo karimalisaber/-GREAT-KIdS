@@ -12,7 +12,6 @@ export class AppComponent {
   portfolioImagesWindow:  Array<any> = []; 
   url ='assets/images/portfolio/'; 
   title = 'GREAT KIdS';
-
   kairm;
   
 
@@ -25,6 +24,7 @@ export class AppComponent {
     this.setPortfolio();
     
   }
+
   setPortfolio(){
     for(let i = 1; i<44; i++){
       if(i<13)
@@ -33,13 +33,13 @@ export class AppComponent {
     };
   }
 
-  
   open(i){
-    this._lightbox.open(this.portfolioImagesWindow, 1);
+    this._lightbox.open(this.portfolioImagesWindow, 1);  
+  }
 
-    // let postsImgs =[];
-    // imgs.filter(res=> postsImgs.push({'src': this.url + res.name}))
-   
+  send(data){
+    console.log(data);
     
   }
+
 }

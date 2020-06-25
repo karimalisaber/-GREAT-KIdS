@@ -127,28 +127,11 @@ h6 {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 
-#header #logo h1 {
-  font-size: 33px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-}
-
-#header #logo h1 a {
-  color: $mainColor;
-  line-height: 1;
-  display: inline-block;
-}
-
-#header #logo h1 a span {
-  color: $secondColor;
-}
-
 #header #logo img {
   padding: 0;
   margin: 0;
+  width: 240px;
+  height: 50px;
 }
 
 /*--------------------------------------------------------------
@@ -244,7 +227,7 @@ h6 {
 
 #intro .wrapper::before {
   content: '';
-  background-color: rgba($color: #fff8ab, $alpha: .3);
+  background-color: rgba($color: #fff8ab, $alpha: .2);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -254,16 +237,6 @@ h6 {
   bottom: 0;
   z-index: 7;
 }
-
-#intro #intro-carousel .item {
-  width: 100%;
-  height: 60vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition-property: opacity;
-}
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -584,6 +557,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
   transition: 0.4s;
+  border-radius: 14px;
 }
 
 #services .box:hover {
@@ -981,14 +955,6 @@ h4.title{
   display: block;
 }
 
-#contact .form .validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
-}
-
 #contact .form input,
 #contact .form textarea {
   padding: 10px 14px;
@@ -1123,9 +1089,6 @@ h4.title{
     text-align: center;
   }
 
-  #testimonials .testimonial-item {
-    margin: 30px 10px;
-  }
 }
 
 @media (max-width: 576px) {
@@ -1133,7 +1096,10 @@ h4.title{
     margin-top: 20px;
   }
 }
-
+.great{
+  font-size: 1.4rem;
+  color: #ffa10f;
+}
 
 
 .service-img{
@@ -1144,7 +1110,114 @@ h4.title{
   max-width: 170px;
   width: 170px;
   height: 170px;
-  // width: 100%;
-  // height: 50px;
+}
 
+textarea{
+  resize: none;
+}
+
+.main-background{
+  background-color: #F7FBFD;
+  border-bottom: 1px solid rgba(87, 154, 211, 0.3);
+  border-top: 1.5px solid rgba(87, 154, 211, 0.3);
+}
+
+#viedo-add{
+  .video-wrapper{
+      position: relative;
+
+      .video{
+          border: 1px solid #c2c2c2;
+          box-shadow: 0px 2px 4px 1px #c2c2c2;
+          background-color: #fff;
+          border-radius: 15px;
+          width: 55%;
+          position: relative;
+          margin: auto;
+          height: 550px;
+      }
+
+      iframe{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            left: 30px;
+            bottom: 30px;
+            height: calc(100% - 60px);
+            width: calc(100% - 60px);
+            // border-radius: 15px;
+      }
+  }
+}
+
+@media(max-width: 1200px){
+  
+#viedo-add{
+  .video-wrapper{
+      .video{
+          width: 55%;
+          height: 480px;
+      }
+
+          iframe{
+       
+              right: 30px;
+              left: 30px;
+              bottom: 30px;
+              height: calc(100% - 60px);
+              width: calc(100% - 60px);
+              // border-radius: 15px;
+          }
+
+  }
+}
+
+}
+
+@media(max-width: 992px){
+  
+  #viedo-add{
+      .video-wrapper{
+          .video{
+              width: 70% !important;
+              height: 400px !important;
+          }
+      }
+  }
+  
+
+}
+
+@media(max-width: 786px){
+  #viedo-add{
+      .video-wrapper{
+          .video{
+              width: 95%;
+              height: 400px;
+          }
+
+      }
+  }
+}
+  
+  
+@media(max-width: 576px){
+  #viedo-add{
+      .video-wrapper{
+          .video{
+              height: 300px !important;
+          }
+      
+          iframe{
+              position: absolute;
+              top: 15px;
+              right: 15px;
+              left: 15px;
+              bottom: 15px;
+              height: calc(100% - 30px);
+              width: calc(100% - 30px);
+              // border-radius: 15px;
+          }
+      }
+  }    
 }

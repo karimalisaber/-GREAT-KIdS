@@ -1,0 +1,98 @@
+[debug] [2020-06-25T04:34:44.137Z] ----------------------------------------------------------------------
+[debug] [2020-06-25T04:34:44.139Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-06-25T04:34:44.139Z] CLI Version:   8.4.3
+[debug] [2020-06-25T04:34:44.139Z] Platform:      win32
+[debug] [2020-06-25T04:34:44.139Z] Node Version:  v12.18.0
+[debug] [2020-06-25T04:34:44.140Z] Time:          Thu Jun 25 2020 06:34:44 GMT+0200 (Eastern European Standard Time)
+[debug] [2020-06-25T04:34:44.140Z] ----------------------------------------------------------------------
+[debug] [2020-06-25T04:34:44.140Z] 
+[debug] [2020-06-25T04:34:44.145Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-25T04:34:44.145Z] > authorizing via signed-in user
+[debug] [2020-06-25T04:34:44.146Z] [iam] checking project greatkids-46b0a for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-06-25T04:34:44.148Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/greatkids-46b0a:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2020-06-25T04:34:45.088Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 25 Jun 2020 04:34:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=701","alt-svc":"h3-28=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-25T04:34:45.089Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/greatkids-46b0a  
+ 
+[debug] [2020-06-25T04:34:45.431Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 25 Jun 2020 04:34:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'greatkids-46b0a'...
+[info] 
+[info] i  deploying database, hosting 
+[info] i  database: checking rules syntax... 
+[debug] [2020-06-25T04:34:45.440Z] >>> HTTP REQUEST PUT https://greatkids-46b0a.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2020-06-25T04:34:46.181Z] <<< HTTP RESPONSE 200 {"server":"nginx","date":"Thu, 25 Jun 2020 04:34:46 GMT","content-type":"application/json; charset=utf-8","content-length":"15","connection":"keep-alive","access-control-allow-origin":"*","cache-control":"no-cache","strict-transport-security":"max-age=31556926; includeSubDomains; preload"}
+[info] +  database: rules syntax for database greatkids-46b0a is valid 
+[debug] [2020-06-25T04:34:46.183Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/greatkids-46b0a/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-06-25T04:34:48.083Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 25 Jun 2020 04:34:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[greatkids-46b0a]: beginning deploy... 
+[info] i  hosting[greatkids-46b0a]: found 135 files in dist/hadana 
+[debug] [2020-06-25T04:34:48.111Z] [hosting] hash cache [ZGlzdFxoYWRhbmE] not populated
+[debug] [2020-06-25T04:34:51.122Z] [hosting] hash cache [ZGlzdFxoYWRhbmE] stored for 135 files
+[debug] [2020-06-25T04:34:51.123Z] [hosting][hash queue][FINAL] {"max":2897,"min":14,"avg":995.0370370370371,"active":0,"complete":135,"success":135,"errored":0,"retried":0,"total":135,"elapsed":3011}
+[debug] [2020-06-25T04:34:51.125Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/greatkids-46b0a/versions/399b580da094efd3:populateFiles  
+ <request body omitted>
+[debug] [2020-06-25T04:34:52.563Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 25 Jun 2020 04:34:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-06-25T04:34:52.593Z] [hosting][populate queue][FINAL] {"max":1451,"min":1451,"avg":1451,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1476}
+[debug] [2020-06-25T04:34:52.593Z] [hosting] uploads queued: 128
+[debug] [2020-06-25T04:35:10.317Z] [uploadQueue] Retrying task 08d2869329dd90048c2e058b7da48e182b6b1ec4b463679e3e539f46e47afb39
+[debug] [2020-06-25T04:35:14.172Z] [uploadQueue] Retrying task cff391512e7b489403e70395b87628c4a2a91ec79d0105536e7286120974faeb
+[debug] [2020-06-25T04:35:14.172Z] [uploadQueue] Retrying task b317fcc5942bb91b2645bd74e0d4db6573e89a4afdf23c5873ef8a3961b72240
+[debug] [2020-06-25T04:35:14.173Z] [uploadQueue] Retrying task f9f7d57d86aec81ad638fafaf47f005a56711ff33a31af1cfadde8158dcd1190
+[debug] [2020-06-25T04:35:14.173Z] [uploadQueue] Retrying task bff074d2b77fbc670e8c3fa80001c15d309dfc538f51d696479ab2370e6d03c4
+[debug] [2020-06-25T04:35:14.174Z] [uploadQueue] Retrying task 254a6dbad5f297ae25e0970ee44b8b45fd14925f6b9e38c997088bdf840a53e9
+[debug] [2020-06-25T04:35:14.175Z] [uploadQueue] Retrying task acfd1b2b458740560e9ef6f71fd5501caf12a73489e43ee0375dcd869d43cc18
+[debug] [2020-06-25T04:35:14.175Z] [uploadQueue] Retrying task 36b5c5f9c5b87acfb1c3e1239a28955f6bc834c4392534ec316add6a1cc5af5e
+[debug] [2020-06-25T04:35:14.175Z] [uploadQueue] Retrying task 709b6350278f04d4936be5f171583ee0be6d7f966e4fa305c525338fe8cd7bfb
+[debug] [2020-06-25T04:35:14.176Z] [uploadQueue] Retrying task 40d5e42c2cc6d809bf4b566da0715ac03d96762b74d1fe47c60c642d59d81a2c
+[debug] [2020-06-25T04:35:14.176Z] [uploadQueue] Retrying task 9d7aab993cc75b13dbe21cd8eac85ebf684a996bd3213341187de5f412c06756
+[debug] [2020-06-25T04:35:14.177Z] [uploadQueue] Retrying task b44817bd9af8233591fe947002f3aa989e0ebc445557c43b2bce7252c650b19f
+[debug] [2020-06-25T04:35:14.177Z] [uploadQueue] Retrying task 46b7b8d93cba43d2c07f98605e8298f26784c749c3c53862113b6e10e78ab712
+[debug] [2020-06-25T04:35:14.177Z] [uploadQueue] Retrying task df1907593a6c03a9257f4012fe1e039b498b42e7047fb440628cf3ef2817fb06
+[debug] [2020-06-25T04:35:14.178Z] [uploadQueue] Retrying task 188ebde6386800c4602cfa4aea2d999e00ca116d046a9a4a195110a75cc54bb1
+[debug] [2020-06-25T04:35:14.179Z] [uploadQueue] Retrying task a98cc44a7eabb0aaedca61a47e37ed9648aae926846b32fd7790a146867b256c
+[debug] [2020-06-25T04:35:14.179Z] [uploadQueue] Retrying task ef654cc7b86a0a270a50b0e91d75cae96b2f03fa7106b95f947a609d77b0be2d
+[debug] [2020-06-25T04:35:14.179Z] [uploadQueue] Retrying task 4483f79e2558442f81b753c40e4eac9f214b297cdb2c2d73715778c3eabd0995
+[debug] [2020-06-25T04:35:14.180Z] [uploadQueue] Retrying task 7be7a0ec173f243a5e6d716afc0560382b1913e2671c691275776161b11001a9
+[debug] [2020-06-25T04:35:14.180Z] [uploadQueue] Retrying task b3207d9ed2a03ad88e0c7c20eb32a18c3a6b9edac4856e3a92b126f6721dbe0a
+[debug] [2020-06-25T04:35:14.180Z] [uploadQueue] Retrying task 09231442d1eafa80e54d577dfa00cdac851d26b23f9baeffc6f6cceb99c52fd9
+[debug] [2020-06-25T04:35:14.181Z] [uploadQueue] Retrying task 8c9179c793551d0c81fd1839e95a97826c767833fa1af4b7f3e6d1f27365d9f5
+[debug] [2020-06-25T04:35:14.181Z] [uploadQueue] Retrying task 15a6dcba2decb18871f5356d312c6db153905540f187e0e5d0ac42da4405bcb8
+[debug] [2020-06-25T04:35:14.181Z] [uploadQueue] Retrying task 07758980b5da88f55fc44026a3cbd4a851d50742c8f689704f2c249362f40ef4
+[debug] [2020-06-25T04:35:14.182Z] [uploadQueue] Retrying task f2ea97575364fe9a7c1fa3ad7bf4e16e1763e7db052a3869d470a164e360bb52
+[debug] [2020-06-25T04:35:14.182Z] [uploadQueue] Retrying task 34595d2474119c549b23f7783616d9754313c3b27191ab1c3879a395b26e8a88
+[debug] [2020-06-25T04:35:14.184Z] [uploadQueue] Retrying task 39943a8c7d8c915c3b988d3bb61b793c3505224cff37ed0de90fb2cc707c4565
+[debug] [2020-06-25T04:35:14.184Z] [uploadQueue] Retrying task 4438c45a91230de5d0d33f1d84c90c23b0e14660996f15599302970ae08ee239
+[debug] [2020-06-25T04:35:14.184Z] [uploadQueue] Retrying task 6fa083794da0dc64307cd79bcfe9ba74019ea5aeae720e23ad0319df6f0e7380
+[debug] [2020-06-25T04:35:14.185Z] [uploadQueue] Retrying task f41ca3484b4eb972eb4a8683c192a39fdb29b7afc47759de6a32117f03a2cd6d
+[debug] [2020-06-25T04:35:28.192Z] [uploadQueue] Retrying task 15a6dcba2decb18871f5356d312c6db153905540f187e0e5d0ac42da4405bcb8
+[debug] [2020-06-25T04:35:30.364Z] [uploadQueue] Retrying task 4483f79e2558442f81b753c40e4eac9f214b297cdb2c2d73715778c3eabd0995
+[debug] [2020-06-25T04:35:30.395Z] [uploadQueue] Retrying task 39943a8c7d8c915c3b988d3bb61b793c3505224cff37ed0de90fb2cc707c4565
+[debug] [2020-06-25T04:35:30.488Z] [uploadQueue] Retrying task f41ca3484b4eb972eb4a8683c192a39fdb29b7afc47759de6a32117f03a2cd6d
+[debug] [2020-06-25T04:35:50.584Z] [uploadQueue] Retrying task a98cc44a7eabb0aaedca61a47e37ed9648aae926846b32fd7790a146867b256c
+[debug] [2020-06-25T04:35:50.845Z] [uploadQueue] Retrying task 188ebde6386800c4602cfa4aea2d999e00ca116d046a9a4a195110a75cc54bb1
+[debug] [2020-06-25T04:36:04.774Z] [uploadQueue] Retrying task bb6cef68aa6a0d51614c3e3d573aa9d39d6d45f5b6426e7001c3fa2f5f1c18d8
+[debug] [2020-06-25T04:36:12.455Z] [uploadQueue] Retrying task b317fcc5942bb91b2645bd74e0d4db6573e89a4afdf23c5873ef8a3961b72240
+[debug] [2020-06-25T04:37:33.389Z] [hosting][upload] vendor-es2015.js.map (e3eceaec0e7eaffbf469fd226c4be4b57f53bea56eade761137b74e0766011b0) HTTP ERROR 502 : {"content-type":"text/html; charset=UTF-8","referrer-policy":"no-referrer","content-length":"1613","date":"Thu, 25 Jun 2020 04:37:33 GMT","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","connection":"close"} <!DOCTYPE html>
+<html lang=en>
+  <meta charset=utf-8>
+  <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+  <title>Error 502 (Server Error)!!1</title>
+  <style>
+    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}
+  </style>
+  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>
+  <p><b>502.</b> <ins>That’s an error.</ins>
+  <p>The server encountered a temporary error and could not complete your request.<p>Please try again in 30 seconds.  <ins>That’s all we know.</ins>
+
+[debug] [2020-06-25T04:37:33.790Z] [uploadQueue] Retrying task e3eceaec0e7eaffbf469fd226c4be4b57f53bea56eade761137b74e0766011b0
+[debug] [2020-06-25T04:38:20.166Z] [uploadQueue] Retrying task 74100cc9c1703bf076edd9fc0b212782d2b58c8ba2ef9bad981f5d6ce0f77597
+[debug] [2020-06-25T04:39:55.189Z] [uploadQueue] Retrying task 13a5735bed78f6ffa1dc0c08a00284a68d8f8a028b17a2457eebe8b2609abac4
