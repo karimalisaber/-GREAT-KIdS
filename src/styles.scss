@@ -46,3 +46,16 @@ mat-datepicker-toggle{
     background-color: $secondColor;
     outline: 1px solid slategrey !important;
 }
+
+.background-none{
+    background-color: transparent !important ;
+    box-shadow:  none !important;
+}
+
+.second-message{
+    background-color: pink !important ;
+    padding: 30px 10px;
+    *{
+        font-size: 1.3rem;
+    }
+}

@@ -1,0 +1,121 @@
+<section id="contact" class="mt-30">
+    <div class="container">
+      <div class="wow fadeInUp text-right section-header">
+        <h2>احجز موعد</h2>
+        <p class="great">نتشرف بزيارتكم لنا، لكن فضلًا قم باختيار موعد حتى نُحسن استقبالكم</p>
+      </div>
+
+      <div class="row contact-info wow fadeInUp">
+        <div class="col-md-4">
+          <div class="contact-address">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3 class="mv-10">العنوان</h3>
+            <address>3864-3840 Al Imam Ali Ibn Abi Talib St, Al Rawdah, Dammam 32255, Saudi Arabia </address>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-phone">
+            <i class="fas fa-phone"></i>
+            <h3 class="mv-10">الجوال</h3>
+            <p><a href="tel:+966 54 290 7589">+966 54 290 7589</a></p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="contact-email">
+            <i class="fas fa-envelope"></i>
+
+            <h3>البريد الالكتروني</h3>
+            <p><a href="mailto:greatkidsdm@gmail.com">Greatkidsdm@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mb-4">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.8776648530584!2d50.08452701503392!3d26.39513968335329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDIzJzQyLjUiTiA1MMKwMDUnMTIuMiJF!5e0!3m2!1sen!2seg!4v1592952481885!5m2!1sen!2seg"
+        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false"
+        tabindex="0"></iframe>
+    </div>
+
+    <!-- contact us form -->
+    <div class="container">
+      <div class="form">
+        <form #userForm="ngForm" (ngSubmit)="send(userForm.value)" role="form" class="contactForm">
+          <div class="form-row">
+            <div class="wow fadeInUp form-group col-md-12">
+              <input
+                [ngClass]="{ 'is-invalid': name.invalid && error , 'is-valid': name.valid && error}"
+                
+                required type="text" ngModel #name="ngModel" name="name" class="form-control" id="name"
+                placeholder="الاسم" data-rule="minlen:4" />
+                        
+                <div *ngIf="!name.valid && error" class="" >
+                    <div class="alert alert-danger text-right" *ngIf="name.errors.required">من فضلك  أدخل الاسم </div>
+                </div>
+            </div>
+
+            <div class="wow fadeInUp form-group col-md-12">
+              <input 
+                [ngClass]="{ 'is-invalid': phone.invalid && error , 'is-valid': phone.valid && error}"
+
+                required type="number" #phone="ngModel" ngModel name="phone" class="form-control" id="name"
+                placeholder="الجوال" data-rule="minlen:4" />
+
+                <div *ngIf="!phone.valid && error" class="" >
+                    <div class="alert alert-danger text-right" *ngIf="phone.errors.required">من فضلك أدخل الجوال </div>
+                </div>
+            </div>
+
+            <div class="wow fadeInUp form-group col-md-12">
+              <input #email="ngModel" ngModel type="email" class="form-control" name="email" id="email"
+                placeholder="البريد الالكتروني" data-rule="email" />
+            </div>
+          </div>
+
+          <div class="w-100 form-group">
+            <div class="wow fadeInUp row w-100 no-gutters">
+              <h2 class="text-right w-100 date-header">احجز موعد</h2>
+
+              <div class=" col-md-6 form-group">
+                <input  
+                    [ngClass]="{ 'is-invalid': date.invalid && error , 'is-valid': date.valid && error}"
+                    required #date="ngModel" name="date" ngModel id="date" class="form-control" type="date">
+
+                <div *ngIf="!date.valid && error" class="" >
+                    <div class="alert alert-danger text-right" *ngIf="date.errors.required">من فضلك  أدخل تاريخ الزيارة </div>
+                </div>
+              </div>
+
+              <div class="col-md-6 form-group pr-10">
+                <input required 
+                [ngClass]="{ 'is-invalid': time.invalid && error , 'is-valid': time.valid && error}"
+    
+                #time="ngModel" ngModel name="time" class="form-control w-100" id="time" type="time">
+                <div *ngIf="!time.valid && error" class="" >
+                    <div class="alert alert-danger text-right" *ngIf="time.errors.required">من فضلك  أدخل موعد الزيارة </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wow fadeInUp form-group">
+            <textarea
+            [ngClass]="{ 'is-invalid': message.invalid && error , 'is-valid': message.valid && error}"
+
+            required class="form-control" #message="ngModel" ngModel name="message" rows="5" data-rule="required"
+              placeholder="نُحب أن تترك لنا رسالتك"></textarea>
+
+            <div *ngIf="!message.valid && error" class="" >
+              <div class="alert alert-danger text-right" *ngIf="message.errors.required">نحب أن تترك لنا رسالتك  </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <input class="btn" type="submit" value="ارسال ">
+
+        </div>
+        </form>
+      </div>
+    </div>
+  </section>

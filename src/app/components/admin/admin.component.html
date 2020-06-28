@@ -1,0 +1,54 @@
+
+<div *ngIf="isLoading" class="mt-100 d-flex justify-content-center" >
+    <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="pb-80 ph-50">
+    <table mat-table [dataSource]="dataSource" class="ph-20 mt-100 w-100 mat-elevation-z8">      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> الاسم </th>
+          <td mat-cell *matCellDef="let element"> {{element.payload.val().name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> البريد الالكتروني </th>
+          <td mat-cell *matCellDef="let element"> {{element.payload.val().email}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef> الجوال </th>
+          <td mat-cell *matCellDef="let element"> {{element.payload.val().phone}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> اليوم </th>
+            <td mat-cell *matCellDef="let element"> {{element.payload.val().date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="time">
+            <th mat-header-cell *matHeaderCellDef> الساعة </th>
+            <td mat-cell *matCellDef="let element"> {{element.payload.val().time}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="message">
+            <th mat-header-cell *matHeaderCellDef> رسالة </th>
+            <td mat-cell *matCellDef="let element"> {{element.payload.val().message}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="notes">
+            <th mat-header-cell *matHeaderCellDef> حذف </th>
+            <td mat-cell *matCellDef="let element"> 
+           
+                <button (click)="deleteAlert(element.payload.key)" class="btn">
+                   <i class="fas fa-trash"></i>
+                </button>
+        </ng-container>
+
+        <tr class="text-right" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr class="text-right" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>    
+</div>

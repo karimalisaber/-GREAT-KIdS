@@ -1,0 +1,172 @@
+<div class="d-flex align-items-center justify-content-center pre-load">
+  <section class='main-wrapper'>
+    <img src="assets/images/layout/favicon.png" alt="">
+    
+    <h1>GRE<span>AT</span> KI<span>dS</span></h1>
+  </section>  
+</div>
+
+<section id="intro">
+    <img class="slider-img" src="assets/images/layout/center-slider.png" alt="">
+  
+    <div class="intro-content">
+      <div>
+        <a href="#contact" class="btn-get-started scrollto">احجز موعد</a>
+        <a href="#portfolio" class="btn-projects scrollto">شاهد أكثر</a>
+      </div>
+    </div>
+  
+    <!-- <div id="intro-carousel" class="owl-carousel" > -->
+    <div class="wrapper">
+    </div>
+</section>
+
+<main id="main">
+    <!--      About Section
+      =-->
+    <section id="about" class="mt-40 wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 about-img">
+            <img src="assets/images/about.png" style="height: 400px; width: 100%;" alt="">
+          </div>
+  
+          <div class="text-right col-lg-6 content pr-40 mt-50">
+            <h2 class="mb-40 text-center">من نحن</h2>
+            <h3 class="mb-20">نادي ترفيهي و رعاية للأطفال</h3>
+  
+            <ul>
+              <li><i class="fas fa-check"></i> مناهج تعليميه في جو من المرح</li>
+              <li><i class="fas fa-check"></i> توفير الرعاية الصحية و البدنية والذهنية للأطفال تحت إشراف طاقم سعودي</li>
+              <li><i class="fas fa-check"></i> نستقبل اطفالكم فترتي الصباح و المساء طيلة أيام الأسبوع ما عدا الجمعة</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Services Section -->
+    <section id="services" class="mt-40">
+      <div class=" container">
+        <div class="text-right section-header">
+          <h2>ما نقدمه لطفلك</h2>
+          <!-- <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p> -->
+        </div>
+  
+        <div class="row text-right">
+          <div class="col-lg-6 mb-30 ">
+            <div class="box wow fadeInRight">
+              <div class="row">
+                <div style="background: url('assets/images/layout/service-1.jpg');" class="service-img col-md-5">
+                  <!-- <img class="service-img" src="" alt=""> -->
+                </div>
+  
+                <div class="col-md">
+                  <h4 class="title">ألعاب حركية</h4>
+                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat tarad limino ata nodera clas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-6 mb-30">
+            <div class="box wow fadeInRight">
+              <div class="row">
+                <div style="background: url('assets/images/layout/service-2.jpg');" class="service-img col-md-5">
+                  <!-- <img class="service-img" src="" alt=""> -->
+                </div>
+  
+                <div class="col-md">
+                  <h4 class="title">ألعاب تعليمية</h4>
+                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat tarad limino ata nodera clas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="row">
+                <div style="background: url('assets/images/layout/service-3.jpg');" class="service-img col-md-5">
+                  <!-- <img class="service-img" src="" alt=""> -->
+                </div>
+  
+                <div class="col-md">
+                  <h4 class="title">ركن فني</h4>
+                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat tarad limino ata nodera clas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="row">
+                <div style="background: url('assets/images/layout/service-4.jpg');" class="service-img col-md-5">
+                  <!-- <img class="service-img" src="" alt=""> -->
+                </div>
+  
+                <div class="col-md">
+                  <h4 class="title">سينما</h4>
+                  <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo consequat tarad limino ata nodera clas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!--      Our Portfolio Section
+      =-->
+    <section id="portfolio" class="wow fadeInUp">
+      <div class="container">
+        <div class="text-right section-header">
+          <h2>ألبومات</h2>
+        </div>
+      </div>
+  
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div *ngFor="let i of portfolioImages" class="col-lg-3 col-md-4">
+            <div class="portfolio-item wow fadeInUp">
+              <a href="{{i}}" class="portfolio-popup">
+                <img class="img-fluid" [src]="i" alt="">
+                <div class="portfolio-overlay">
+                  <!-- <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 1</h2></div> -->
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- #portfolio -->
+  
+    <!-- start viedo-add section -->
+    <section class="pv-80 main-background wow fadeInUp" id="viedo-add">
+      <div class="video-wrapper">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/TUyd_to_M6g" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- end viedo-add section -->
+  
+    <!--  Contact Section-->
+    <app-appointemnt></app-appointemnt>
+  </main>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>ClickToPass</strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>

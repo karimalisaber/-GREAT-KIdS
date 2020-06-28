@@ -1,0 +1,83 @@
+$mainColor: #ec008c;
+$secondColor: #00aeef;
+$thirdColor: #fff8ab;
+
+.pre-load{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    z-index: 10105151;
+    animation: hide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    
+    .main-wrapper{
+        position: absolute;
+        top: 40%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    img{
+        position: relative;
+        animation-name: opacity ;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        visibility: visible;
+        width: 180px;
+        height: 140px;
+    }
+
+    h1{
+        margin-left: -70px;
+        margin-top: 35px;
+       font-size: 3.5rem;
+       color: $mainColor !important;
+       animation: shrunk;
+       animation-duration: 3.5s;
+       span{
+           color: $secondColor;
+       }
+    }
+}
+
+
+@keyframes hide{
+    to{
+        visibility: hidden;
+        z-index: -10000;
+    }
+}
+
+
+@keyframes opacity{
+    25%{
+        transform: rotate(180deg);    
+        opacity: .5;
+    }
+
+    50%{
+        transform: rotate(360deg);    
+        opacity: 0;
+    }
+
+    75%{
+        opacity: .5;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes shrunk{
+    // from{width: 100%;}
+    to{
+        opacity: 0;
+    }
+}

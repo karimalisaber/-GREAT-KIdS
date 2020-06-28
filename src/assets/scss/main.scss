@@ -963,7 +963,7 @@ h4.title{
   font-size: 15px;
 }
 
-#contact .form button[type="submit"] {
+#contact .form input[type="submit"] {
   background: $secondColor;
   border: 0;
   border-radius: 3px;
@@ -973,7 +973,7 @@ h4.title{
   cursor: pointer;
 }
 
-#contact .form button[type="submit"]:hover {
+#contact .form input[type="submit"]:hover {
   background: #2dc899;
 }
 

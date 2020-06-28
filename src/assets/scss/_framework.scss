@@ -682,7 +682,7 @@ a:focus
 
 .hover{
   &:hover{
-    cursor: pointer;
+    cursor: pointer !important; 
   }
 }
 

@@ -1,0 +1,49 @@
+<!--    Top Bar
+  =-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-right">
+        <i class="fa fa-phone"></i> <a href="mailto:contact@example.com">Greatkidsdm@gmail.com</a>
+  
+        <i class="fa fa-envelope"></i> +966 54 290 7589
+      </div>
+      <div class="social-links float-left">
+        <a href="https://twitter.com/GREATKIDSDM" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.snapchat.com/add/greatkidsdm" target="_blank" class="facebook"><i class="fab fa-snapchat-ghost"></i></a>
+        <a href="https://instagram.com/greatkidsdm?igshid=rdbc5ahkfgax" target="_blank" class="instagram"><i
+            class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+  
+  <!--    Header
+    =-->
+  <header id="header">
+    <a *ngIf="isAdmin" (click)="logout()" class="logout"><i class="fas fa-power-off"></i></a>
+
+    <div class="main-wrapper container">
+
+      <div class="row ">
+        <div id="logo" class="ml-auto">
+          <!-- <h1><a href="#body" class="scrollto">GRE<span>AT</span> KI<span>dS</span> </a></h1>       -->
+          <!-- <a href="#body"><img src="assets/images/logo.png" alt="" title="" /></a> -->
+          <a href="">
+            <img class="img-fluid" src="assets/images/layout/logo.png" alt="">
+          </a>
+        </div>
+  
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#portfolio">ألبومات</a></li>
+  
+            <li><a href="#contact">احجز موعد</a></li>
+  
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  

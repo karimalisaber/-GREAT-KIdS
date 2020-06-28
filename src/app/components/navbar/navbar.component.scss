@@ -1,0 +1,13 @@
+header{
+    position: relative;
+    .logout{
+        position: absolute ;
+        left: 100px;
+        top: 30px;
+        font-size: 1.4rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
